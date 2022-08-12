@@ -1,6 +1,6 @@
 # Name - Divyesh Patel
 
-### Project Name - Product Home Page
+### Project Name - Developer Landing Page
 In this Project I have learned about flexbox and its parent and child elements and Background property more in detail.
 
 ### Technologies
