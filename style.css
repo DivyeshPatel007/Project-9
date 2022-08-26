@@ -9,53 +9,96 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   background-color: #ebebeb;
   max-width: 1900px;
   margin: 0 auto;
 }
-a{
+
+a {
   text-decoration: none;
   color: black;
 }
-li{
+
+li {
   list-style-type: none;
   color: #fff;
 }
-header{
+
+/* hamburger */
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  top: 5px;
+}
+
+.bar::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  top: -5px;
+}
+
+
+/* navbar */
+header {
   padding: 0 5rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   height: 35rem;
-  background-color:#3944F7;
+  background-color: #3944F7;
 }
-nav{
-  grid-column: 1 / 3 ;
+
+nav {
+  grid-column: 1 / 3;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 2rem;
   height: 5rem;
 }
-.nav-item{
+
+.nav-item {
   color: #fff;
 }
-.nav-item-active{
-  color:#3944F7 ;
+
+.nav-item-active {
+  color: #3944F7;
   background-color: #fff;
   padding: 0.3rem 0.5rem;
 }
-nav svg{
+
+nav svg {
   width: 1.4rem;
   height: 1.4rem;
 }
 
-.logo{
-  width: 10rem;  
+.logo {
+  width: 10rem;
 
 }
-.header-text{
+
+.header-text {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -64,89 +107,104 @@ nav svg{
   gap: 1rem;
   grid-column: 1/2;
 }
-.header-text h2{
+
+.header-text h2 {
   color: #fff;
   font-size: 2.5rem;
 }
-.header-text p{
+
+.header-text p {
   color: #fff;
   font-size: 1.2rem;
 }
 
-.header-image{
+.header-image {
   margin-left: 5rem;
   width: 100%;
   height: 80%;
 }
 
 /* -------------Companies */
-.companies{
- padding: 0 5rem;
- margin: 3rem 0;
+.companies {
+  padding: 0 5rem;
+  margin: 3rem 0;
 }
 
-.company-items{
+.company-items {
   font-size: 1.3rem;
   font-weight: 800;
-  margin-right:3rem;
+  margin-right: 3rem;
 }
-.api{
+
+.api {
   padding: 0 5rem;
- 
+
 }
+
 .api-heading {
- font-size: 2.5rem;
-   font-weight: 900;
-  
+  font-size: 2.5rem;
+  font-weight: 900;
+
 }
+
 /*--------------------------- CARDS-SECTION */
-.cards{
+.cards {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 15rem;
+  flex-wrap: wrap;
 }
-.card-active{
+
+.card-active {
   border-radius: 15px;
   padding: 2rem;
   background-color: #fff;
 }
-.card-active h3{
+
+.card-active h3 {
   color: #3944F7;
 }
-.card-active p{
+
+.card-active p {
   font-size: 0.8rem;
   font-weight: 500;
 }
-.card{
+
+.card {
   padding: 2rem;
-  
+
 }
-.blog-heading{
+
+.blog-heading {
   margin: 2.5rem 0;
   padding: 0 5rem;
 }
-.blog-cards{
+
+.blog-cards {
   padding: 0 5rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.blog-card{
+
+.blog-card {
   position: relative;
   background-color: #fff;
   display: grid;
-  grid-template-columns:repeat(2,1fr) ;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
   gap: 1rem;
   border-radius: 50px 15px 15px 50px;
 }
-.blog-image{
- grid-column: 1/2;
- grid-row: 1/4;
+
+.blog-image {
+  grid-column: 1/2;
+  grid-row: 1/4;
 }
-.blog-content{
+
+.blog-content {
   position: relative;
   top: 2rem;
   display: flex;
@@ -154,44 +212,51 @@ nav svg{
   gap: 0.5rem;
   justify-self: center;
 }
-.blog-content h6{
+
+.blog-content h6 {
   color: #6239f7;
 }
-.blog-bottom{
-  position:relative;
+
+.blog-bottom {
+  position: relative;
   bottom: -4.5rem;
 
 }
-.blog-author{
+
+.blog-author {
   justify-self: center;
 }
 
 /* ---------------FAQ-SECTION */
-.faq-section{
+.faq-section {
   padding: 0 5rem;
   margin: 5rem 0;
   display: flex;
-  background-color:#dfe1f0;
+  background-color: #dfe1f0;
   align-items: center;
   justify-content: space-between;
   height: 25rem;
 
 }
-.faq-content h2{
+
+.faq-content h2 {
   font-size: 3rem;
   font-weight: 900;
   font-family: 'poppins';
 }
-.faq-content h4{
+
+.faq-content h4 {
   font-size: 0.9rem;
   font-weight: 100;
 }
-.faq-content h4:nth-child(3){
+
+.faq-content h4:nth-child(3) {
   font-size: 1.2rem;
   font-weight: 900;
   margin-top: 2rem;
 }
-.faq-content button{
+
+.faq-content button {
   border: none;
   background-color: #3944F7;
   padding: 1rem 2rem;
@@ -199,7 +264,8 @@ nav svg{
   color: #fff;
   margin-top: 1rem;
 }
-.faq-image img{
+
+.faq-image img {
   position: relative;
   left: 5rem;
   width: 50rem;
@@ -207,34 +273,39 @@ nav svg{
 }
 
 /* -----------DOWNLOAD SECTION---------------- */
-.download-section{
+.download-section {
   padding: 0 5rem;
   display: flex;
   align-items: center;
   height: 10rem;
-  justify-content:space-between ;
+  justify-content: space-between;
 }
-.download-content h1{
+
+.download-content h1 {
   font-weight: 900;
   font-size: 2.5rem;
 }
-.download-content span{
+
+.download-content span {
   font-weight: 100;
   font-size: 2.5rem;
 }
-::placeholder{
+
+::placeholder {
   color: black;
 
 }
-.download-email form input{
-  background-color:#dfe1f0;
+
+.download-section form input {
+  background-color: #dfe1f0;
   border: none;
   padding-left: 2.5rem;
   width: 500px;
   border-radius: 25px;
   height: 60px;
 }
-.download-email form button{
+
+.download-section form button {
   position: relative;
   right: 10rem;
   border: none;
@@ -245,8 +316,9 @@ nav svg{
   color: #fff;
   margin-top: 1rem;
 }
+
 /* -------------Footer-Section */
-.footer-section{
+.footer-section {
   margin-top: 5rem;
   padding: 0 5rem;
   display: flex;
@@ -256,16 +328,409 @@ nav svg{
   background-color: #3944F7;
 }
 
-.list{
+.list {
   margin: 2.5rem 0;
   display: flex;
   gap: 2rem;
 }
-.footer-logos{
+
+.footer-logos {
   margin-left: 2rem;
 }
-.logos-list{
+
+.logos-list {
   margin: 2.5rem 0;
   display: flex;
   gap: 2rem;
+}
+
+/* sm screem */
+
+@media screen and (max-width:640px) {
+  
+
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 1rem;
+    height: 500px;
+  }
+
+  .hamburger {
+    display: block;
+    top: 40px;
+  }
+
+  .header-text h2 {
+    font-size: 2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .companies {
+    padding: 1rem;
+  }
+
+  .company-items {
+    font-size: 1rem;
+  }
+
+  .api {
+    padding: 1rem;
+    height: 700px;
+  }
+
+  .api-heading {
+    text-align: center;
+    font-size: 1.5rem;
+
+  }
+
+  .cards {
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .blog-heading {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .blog-cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .blog-image {
+    margin-top: -75px;
+  }
+
+  .blog-author {
+    margin-left: 20px;
+  }
+
+  .blog-card-bottom-image {
+    margin-bottom: 20px;
+    margin-left: -10px;
+  }
+
+  .faq-section {
+    padding: 1rem;
+    height: 100%;
+
+  }
+
+  .faq-image {
+    display: none;
+  }
+
+  .download-section {
+    gap: 15px;
+    padding: 1rem;
+  }
+
+  .download-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .download-section form input {
+    width: 250px;
+  }
+
+  .download-section form button {
+    left: 5rem;
+  }
+
+  .footer-section {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-left: 9rem;
+
+  }
+
+}
+
+/* md screem */
+
+@media screen and (max-width:768px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    padding: 2rem;
+    height: 500px;
+  }
+
+  .hamburger {
+    display: block;
+    top: 40px;
+  }
+
+  .header-text h2 {
+    font-size: 2rem;
+  }
+
+  .header-text p {
+    font-size: 1rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .company-items {
+    font-size: 1rem;
+  }
+
+  .api {
+    padding: 2rem;
+    height: 650px;
+  }
+
+  .api-heading {
+    text-align: center;
+    font-size: 1.5rem;
+
+  }
+
+  .cards {
+    height: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr); */
+  }
+
+  .blog-heading {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .blog-cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .blog-image {
+    margin-top: -10px;
+  }
+
+  .blog-author {
+    margin-left: 10px;
+  }
+
+  .blog-card-bottom-image {
+    margin-bottom: 10px;
+  }
+
+  .faq-section {
+    padding: 2rem;
+
+  }
+
+  .faq-image {
+    display: none;
+  }
+
+  .download-section {
+    padding: 2rem;
+  }
+
+
+  .download-email form input {
+    width: 400px;
+  }
+
+  .download-email form button {
+    left: 5rem;
+  }
+
+  .footer-section {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-left: 9rem;
+
+  }
+}
+
+/* lg screem */
+
+@media screen and (max-width:1024px) {
+  header {
+    padding: 3rem;
+    height: 600px;
+  }
+
+  nav {
+    height: 1rem;
+  }
+  .header-image {
+    margin-left:3rem ;
+  }
+  .companies {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .api {
+    padding: 3rem;
+  }
+
+  .api-heading {
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 20rem;
+  }
+
+  .blog-heading {
+    padding: 3rem;
+  }
+
+  .blog-cards {
+
+    gap: 2rem;
+  }
+
+  .blog-card {
+    position: relative;
+  }
+
+  .blog-image {
+    position: relative;
+    top: -50px;
+  }
+
+  .blog-bottom {
+    right: 50px;
+  }
+
+  .faq-section {
+    padding: 3rem;
+
+  }
+  .faq-content{
+    flex-basis: 50%;
+  }
+  .faq-image img{
+    left: 3rem;
+    width: 500px;
+    height: 25rem;
+  }
+  .download-section {
+    padding: 2rem;
+  }
+
+
+  .download-email form input {
+    width: 400px;
+  }
+
+  .download-email form button {
+    
+  }
+}
+
+/* xl screem */
+
+@media screen and (max-width:1280px) {
+ 
+   header {
+    padding: 3rem;
+    height: 600px;
+  }
+
+  nav {
+    height: 1rem;
+  }
+  .header-image {
+    margin-left:3rem ;
+  }
+  .companies {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .api {
+    padding: 3rem;
+  }
+
+  .api-heading {
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 20rem;
+  }
+
+  .blog-heading {
+    padding: 3rem;
+  }
+
+  .blog-cards {
+
+    gap: 2rem;
+  }
+
+  .blog-card {
+    position: relative;
+  }
+
+  .blog-image {
+    position: relative;
+  }
+
+  .faq-section {
+    padding: 3rem;
+
+  }
+  .faq-content{
+    flex-basis: 50%;
+  }
+  .faq-image img{
+    left: 3rem;
+    width: 500px;
+    height: 25rem;
+  }
+  .download-section {
+    padding: 2rem;
+  }
+
+
+  .download-email form input {
+    width: 400px;
+  }
+
+  .download-email form button {
+    
+  }
 }
